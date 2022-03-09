@@ -1,0 +1,43 @@
+<!doctype html>
+{%load static%}
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Cadastro</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'signin.css'%}" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    <main style="margin-top:0%;" class="form-signin">
+    <form method="POST">
+        {% csrf_token %}
+        <h1 align="center">Cadastro</h1>
+
+        {% if messages %}
+          
+              {% for message in messages %}
+              <h4 style="color:red;" align="center" {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</h4>
+              {% endfor %}
+          
+        {% endif %}
+
+        <div class="form-floating">
+        <input style="margin-left:10%; width:80%;" class="form-control" id="floatingInput" placeholder="Nome de usuário" name="usu" value="{{request.POST.usu}}">
+        <input style="margin-left:10%; width:80%;" type="number" class="form-control" id="floatingInput" placeholder="Número para Contato" name="numero">  
+        </div>
+        <div class="form-floating">
+        <input style="margin-left:10%; width:80%;" type="password" class="form-control" id="floatingPassword" placeholder="Senha" name="senha">
+        <input style="margin-left:10%; width:80%;" type="password" class="form-control" id="floatingPassword" placeholder="Repita sua Senha" name="senha2">
+        </div>
+        <button style="margin-left:40%; height:30px; border-radius:5px; background-color:green; color:white;" class="w-100 btn btn-lg btn-primary" type="submit"><b>Cadastrar</b></button>
+        
+    </form>
+    </main>
+
+  </body>
+</html>

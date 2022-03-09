@@ -1,0 +1,46 @@
+<!doctype html>
+{%load static%}
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Login</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'signin.css'%}" rel="stylesheet">
+  </head>
+  <body class="text-center">
+
+<main style="margin-top:0%;" class="form-signin">
+  <form method="POST">
+    {% csrf_token %}
+    <img style="width:100px; height:100px; margin-left:35%;" class="mb-4" src="Mask Group.jpg" alt="" >
+    {% if messages %}
+          
+              {% for message in messages %}
+              <h4 style="color:red;" align="center" {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</h4>
+              {% endfor %}
+          
+        {% endif %}
+
+
+    <div class="form-floating">
+      <input style="margin-left:10%; width:80%;" name="usuario" class="form-control" id="floatingInput" placeholder="Usuário. Ex: Carlos123">
+    </div>
+    <div class="form-floating">
+      <input style="margin-left:10%; width:80%;" name="senha" type="password" class="form-control" id="floatingPassword" placeholder="Senha">
+    </div>
+    <button style="margin-left:42%; height:30px; border-radius:5px;" class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
+    <p align="center">Ainda não está cadastrado?</p> 
+    <p align="center">Então Vemtibora <a href="{% url 'cadastro'%}">clique aqui</a></p>
+    <p align="center" class="mt-5 mb-3 text-muted">&copy; 2021–2022</p>
+  </form>
+</main>
+
+
+
+  </body>
+</html>

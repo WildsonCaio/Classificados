@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{%load static%}
+{%load crispy_forms_tags%}
+
+{%block 'conteudo'%}
+
+<form method="POST">
+    {% csrf_token %}
+
+    <div class="sup-diff">
+        <h5>Motivo</h5>
+        <select style="border-radius:8px; text-align:center; height:30px;" name="motivo">
+            <option>Sugestâo</option>
+            <option>Reclamação</option>
+            <option>Parceria</option>
+            <option>Outro</option>
+        </select>
+
+        <h5 style=" margin-top:8%;">Descrição</h5>
+        <textarea style="border-radius:8px; height:150px; width:90%;" type="text" name="descricao"></textarea>
+        <button class="btn btn-success" style="margin-left:30%;">Enviar</button>
+    </div>
+
+</form>
+
+{%endblock%}

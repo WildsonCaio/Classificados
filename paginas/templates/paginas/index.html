@@ -1,0 +1,53 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block 'conteudo'%}
+
+
+ 
+<div class="col-lg-6">
+  {%for i in anuncios%}  
+  <div  class="flex-md-row mb-4 box-shadow h-xl-300">
+    <a href="{%url 'detalhe' i.id%}">
+      <div style="background-color:#D3D3D3;border-radius:5px 5px 0px 5px;" class="mb-3 d-flex align-items-center">
+      {%if i.foto%}
+      <img style="border-radius:5px 0px 0px 5px;" height="85" width="120" src="{{i.foto.url}}">
+      {%else%}
+      <img style="border-radius:5px 0px 0px 5px;" height="85" width="120" src="{% static 'img/unnamed.jpg'%}">
+      {%endif%}
+      <div class="pl-3">
+        <h2 style="padding-top:4%; font-family:Garamond;" class="mb-2 h6 font-weight-bold">
+        <a style="color:black;" href="{%url 'detalhe' i.id%}">{{i.titulo}}</a>
+        </h2>
+      <div class="card-text text-muted small">
+          <h6 style="color:black; opacity:0.7; font-family:Garamond;"><b>R$ {{i.valor}}</b></h6>
+      </div>
+        <small class="text-muted">{{i.cidade}}/{{i.bairro}} </small>
+        
+      </div>
+  </div></a>
+  {%endfor%}
+  
+
+  
+  <div class="pagination">
+    <span class="step-link">
+    
+      {%if anuncios.has_previous%}
+        <a href="?p={{anuncios.previous_page_number}}"><img src="{% static 'img/2.ico'%}" width=35px></a>
+      {%endif%}
+
+      <span class="current">
+        {{anuncios.number}} de {{anuncios.paginator.num_pages}}
+      </span>
+
+      {%if anuncios.has_next%}
+        <a href="?p={{anuncios.next_page_number}}"><img src="{% static 'img/1.ico'%}" width=35px></a>
+      {%endif%}
+    </span>
+  </div>
+
+  
+
+
+{%endblock%}

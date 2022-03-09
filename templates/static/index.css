@@ -1,0 +1,174 @@
+.navbar{
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: #008000;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
+  height: 50px;
+}
+
+.icon_menu{
+  position: absolute;
+  width: 34px;
+  height: 24px;
+  left: 16px;
+  top: 13px;
+}
+
+.icon_anunciar{
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  left: 85%;
+  top: 15%;
+}
+
+.container{
+  position: absolute;
+  width: 92%;
+  height: 80px;
+  left: 14px;
+  top: 9.5%;
+  background: #3BAB54;
+  box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+
+.imagem_item{
+  position: absolute;
+  left:72%;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  border-radius: 12px;
+  width: 28%;
+  height: 100%;
+
+}
+
+
+.titulo_div2{
+  position: absolute;
+  margin-top: 4%;
+}
+
+
+
+.titulo_div3{
+  position: absolute;
+  margin-top: 4%;
+  margin-left: 45%;
+  font-weight:bold;
+}
+
+p {
+  font-size: 18px;
+}
+
+.container-item{
+  background: red;
+  margin-left: 5%;
+  margin-top: 17%;
+  width: 90%;
+
+}
+
+.cont{
+  position: absolute;
+  width: 92%;
+  height: 80px;
+  left: 14px;
+  top: 9.5%;
+  background: red;
+  box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+
+.conteudo {
+  background-color: red;
+  width: 100%;
+  padding: 1px;
+}
+
+.table {
+  margin-top:18%;
+  margin-left: 5%;
+  width: 90%;
+}
+
+.form-group{
+  margin-left: 5%;
+  width: 90%;
+}
+
+textarea#id_descricao{
+  height: 120px;
+}
+
+
+.sup-diff {
+  align-items: center;
+  margin-top: 0%;
+  margin-left: 7%;
+}
+
+
+select#id_categoria {
+  width: 65%;
+}
+
+input#id_valor{
+  width: 100%;
+}
+
+div#div_id_valor{
+  margin-left: 69%;
+  margin-top: -91px;
+  width: 25.5%;;
+}
+
+select#id_cidade {
+  width: 35%;
+}
+
+div#div_id_bairro{
+  margin-left: 42%;
+  width: 52.5%;
+  margin-top: -91px;
+}
+
+
+.pagination{
+  margin-bottom: 20px;
+  margin-left: 45%;
+}
+
+.step-links{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.step-links .current{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.search{
+  margin-left: 65px;
+  border-radius: 8px;
+}
+
+.btn-busca{
+  margin-left: 0%;
+  margin-top: -10%;
+  width: 22px;
+}
+
