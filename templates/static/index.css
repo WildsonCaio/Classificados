@@ -12,6 +12,9 @@
   height: 50px;
 }
 
+.form-group {
+  margin-bottom: 2rem; }
+
 .icon_menu{
   position: absolute;
   width: 34px;
